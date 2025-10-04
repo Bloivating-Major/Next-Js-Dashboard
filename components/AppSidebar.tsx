@@ -5,9 +5,11 @@ import {
   Search,
   Settings,
   User2,
-  ChevronUp
+  ChevronUp,
+  Plus,
+  Projector
 } from "lucide-react";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from "./ui/sidebar";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from "./ui/sidebar";
 import Link from "next/link";
 import Image from "next/image";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "./ui/dropdown-menu";
@@ -43,7 +45,7 @@ const items = [
 const AppSidebar = () => {
   return (
     <Sidebar collapsible="icon">
-      <SidebarHeader>
+      <SidebarHeader className="py-4">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
@@ -56,7 +58,10 @@ const AppSidebar = () => {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarSeparator />
-      <SidebarContent>
+      { /** This is Sidebar Content Start*/}
+      <SidebarContent> 
+
+
         <SidebarGroup>
           <SidebarGroupLabel>
             Application
@@ -76,7 +81,37 @@ const AppSidebar = () => {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
+      <SidebarGroup>
+      <SidebarGroupLabel>Projects</SidebarGroupLabel>
+      <SidebarGroupAction title="Add Project">
+        <Plus /> <span className="sr-only">Add Project</span>
+      </SidebarGroupAction>
+      <SidebarGroupContent>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <Link href="/#">
+              <Projector />
+              Sell All Projects
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <Link href="/#">
+              <Plus />
+              Add Project
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarGroupContent>
+    </SidebarGroup>
+
+
       </SidebarContent>
+      { /** This is Sidebar Content end*/}
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
