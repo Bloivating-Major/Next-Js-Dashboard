@@ -49,8 +49,9 @@ const AppPieChart = () => {
   const totalVisitors = chartData.reduce((acc, curr) => acc + curr.visitors, 0);
   
   return (
-    <div className="">
+    <div className="h-full flex flex-col">
       <h1 className="text-lg font-medium mb-6">Browser Usage</h1>
+      <div className="my-auto">
       <ChartContainer
         config={chartConfig}
         className="mx-auto aspect-square max-h-[250px]"
@@ -106,6 +107,7 @@ const AppPieChart = () => {
         <div className="leading-none text-muted-foreground">
           Showing total visitors for the last 6 months
         </div>
+      </div>
       </div>
     </div>
   );
