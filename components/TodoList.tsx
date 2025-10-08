@@ -2,13 +2,17 @@
 
 import { Card } from "./ui/card";
 import { Checkbox } from "./ui/checkbox";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { ScrollArea } from "./ui/scroll-area";
 
 const TodoList = () => {
   return (
     <div>
       {/* Calander */}
-      Calander
+      <Popover>
+        <PopoverTrigger>Open</PopoverTrigger>
+        <PopoverContent>Place content for the popover here.</PopoverContent>
+      </Popover>
       {/* List */}
       <ScrollArea className="max-h-[400px] mt-4 overflow-y-auto">
         <div className="flex flex-col gap-4">
@@ -21,7 +25,7 @@ const TodoList = () => {
               </label>
             </div>
           </Card>
-           {/* LIST ITEM */}
+          {/* LIST ITEM */}
           <Card className="p-4">
             <div className="flex items-center gap-4">
               <Checkbox id="item1" className="cursor-pointer" />
@@ -29,7 +33,8 @@ const TodoList = () => {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </label>
             </div>
-          </Card> {/* LIST ITEM */}
+          </Card>{" "}
+          {/* LIST ITEM */}
           <Card className="p-4">
             <div className="flex items-center gap-4">
               <Checkbox id="item1" className="cursor-pointer" />
@@ -37,7 +42,8 @@ const TodoList = () => {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </label>
             </div>
-          </Card> {/* LIST ITEM */}
+          </Card>{" "}
+          {/* LIST ITEM */}
           <Card className="p-4">
             <div className="flex items-center gap-4">
               <Checkbox id="item1" className="cursor-pointer" />
@@ -45,7 +51,8 @@ const TodoList = () => {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </label>
             </div>
-          </Card> {/* LIST ITEM */}
+          </Card>{" "}
+          {/* LIST ITEM */}
           <Card className="p-4">
             <div className="flex items-center gap-4">
               <Checkbox id="item1" className="cursor-pointer" />
@@ -53,7 +60,8 @@ const TodoList = () => {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </label>
             </div>
-          </Card> {/* LIST ITEM */}
+          </Card>{" "}
+          {/* LIST ITEM */}
           <Card className="p-4">
             <div className="flex items-center gap-4">
               <Checkbox id="item1" className="cursor-pointer" />
@@ -61,7 +69,8 @@ const TodoList = () => {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </label>
             </div>
-          </Card> {/* LIST ITEM */}
+          </Card>{" "}
+          {/* LIST ITEM */}
           <Card className="p-4">
             <div className="flex items-center gap-4">
               <Checkbox id="item1" className="cursor-pointer" />
@@ -73,7 +82,7 @@ const TodoList = () => {
         </div>
       </ScrollArea>
     </div>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;
