@@ -1,6 +1,8 @@
 import CardList from "@/components/CardList"
+import { Badge } from "@/components/ui/badge"
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
+import { Progress } from "@/components/ui/progress"
 import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react"
 
 const SingleUserPage = () => {
@@ -90,7 +92,37 @@ const SingleUserPage = () => {
           </div>
           {/* Information  */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            Info
+            <div className="space-y-4 mt-4">
+              <div className="flex flex-col gap-2 mb-8">
+                <p className="text-sm text-muted-foreground">
+                  Profile completion
+                </p>
+                <Progress value={66} />
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Username:</span>
+                <span>sambhav.wakhariya</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Email:</span>
+                <span>sambhav.wakhariya@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Phone:</span>
+                <span>+91 80106-42792</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Location:</span>
+                <span>Pune, Maharashtra</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-bold">Role:</span>
+                <Badge>Admin</Badge>
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              Joined on 2025.01.01
+            </p>
           </div>
           {/* Card List */}
           <div className="bg-primary-foreground p-4 rounded-lg">
