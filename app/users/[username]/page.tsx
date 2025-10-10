@@ -1,5 +1,6 @@
 import CardList from "@/components/CardList";
 import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
@@ -156,7 +157,19 @@ const SingleUserPage = () => {
         <div className="w-full xl:w-2/3 space-y-6">
           {/* User Card Container */}
           <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
-            User Card
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://github.com/Bloivating-Major.png" />
+                <AvatarFallback>SW</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-semibold">Sambhav Wakhariya</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              voluptas distinctio ab ipsa commodi fugiat labore quos veritatis
+              cum corrupti sed repudiandae ipsum, harum recusandae ratione ipsam
+              in, quis quia.
+            </p>
           </div>
 
           {/* Chart Container */}
