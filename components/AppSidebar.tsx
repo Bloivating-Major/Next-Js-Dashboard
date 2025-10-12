@@ -8,7 +8,9 @@ import {
   ChevronUp,
   Plus,
   Projector,
-  ChevronDown
+  ChevronDown,
+  IndianRupee,
+  ProjectorIcon,
 } from "lucide-react";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarSeparator } from "./ui/sidebar";
 import Link from "next/link";
@@ -21,6 +23,16 @@ const items = [
     title: "Home",
     url: "/",
     icon: Home,
+  },
+  {
+    title: "User",
+    url: "/users/user1",
+    icon : User2,
+  },
+  {
+    title: "Payment",
+    url: "/payments",
+    icon: ProjectorIcon,
   },
   {
     title: "Inbox",
@@ -87,17 +99,17 @@ const AppSidebar = () => {
 
       {/* Actions In Sidebar */}
       <SidebarGroup>
-      <SidebarGroupLabel>Projects</SidebarGroupLabel>
-      <SidebarGroupAction title="Add Project">
-        <Plus /> <span className="sr-only">Add Project</span>
+      <SidebarGroupLabel>Payments</SidebarGroupLabel>
+      <SidebarGroupAction title="Add Payments">
+        <Plus /> <span className="sr-only">Add Payments</span>
       </SidebarGroupAction>
       <SidebarGroupContent>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
-              <Link href="/#">
-              <Projector />
-              Sell All Projects
+              <Link href="/payments">
+              <IndianRupee />
+              Sell All Payments
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
